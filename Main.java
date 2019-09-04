@@ -20,10 +20,10 @@ public class Main {
 
         //Проверка данных. Подходят ли требованиям. и являются арабскими либо римскими
         if(Character.isDigit(ch[0]) && Character.getNumericValue(ch[0]) > -1
-                && (Character.getNumericValue(ch[1]) == '*'
-                        || Character.getNumericValue(ch[1]) == '-'
-                        || Character.getNumericValue(ch[1]) == '/'
-                        || Character.getNumericValue(ch[1]) == '+')) {
+                                    && (ch[1] == '*'
+                                    ||  ch[1] == '/'
+                                    ||  ch[1] == '-'
+                                    ||  ch[1] == '+')  ) {
             checkNumbers.sortArabicNumbers(ch);
 
         } else if(Character.isLetter(ch[0]) ) {
@@ -31,13 +31,13 @@ public class Main {
             oneRomanNumber = checkNumbers.getOneRomanNumber();//.replace("\"","");
             twoRomanNumber = checkNumbers.getTwoRomanNumber();//.replace("\"","");
 
-        } else System.out.println("Вы ввели некорректные данные");
+        } else System.out.println("Вы ввели некорректные данные))))");
 
 
 
 
         // Сортируем полученные данные и выводим на экран
-        if(checkNumbers.getOneArabicNumber() >= 0 && checkNumbers.getTwoArabicNumber() <=9) {
+        if(checkNumbers.getOneArabicNumber() > -1 && checkNumbers.getOneArabicNumber()<=9) {
             int a = checkNumbers.getOneArabicNumber();
             int b = checkNumbers.getTwoArabicNumber();
             operator = checkNumbers.getOperator();
@@ -74,12 +74,10 @@ public class Main {
             int f =checkOperators.calulater(c,d,operator);
             String resultRoman = Converter.convertArabicToRoman(f);
             System.out.println(resultRoman);
-            System.out.println(f);
-            System.out.println(c);
-            System.out.println(d);
-            System.out.println(oneRomanNumber);
-            System.out.println(twoRomanNumber);
+
+
 
         } else throw new NumberFormatException("Вы ввели некорректные данные");
-    }
-}
+
+
+}}

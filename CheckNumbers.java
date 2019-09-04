@@ -31,12 +31,13 @@ public class CheckNumbers {
 
 
 
+
     public void sortArabicNumbers(char[] ch) { //метод проверят - является ли char числом или буквой
-                                               // и конвертирует char  в int (арабские цифры)
+                                                    // и конвертирует char  в int (арабские цифры)
            for(int i = 0; i < ch.length; i++) {
-               if ((Character.isDigit(ch[i]) )
-                       && (Character.getNumericValue(ch[i]) >= 0
-                       && Character.getNumericValue(ch[i]) <= 9)) {
+               if ( Character.isDigit(ch[i])
+                       && Character.getNumericValue(ch[i]) > -1
+                       && Character.getNumericValue(ch[i]) <= 9 ) {
                    oneArabicNumber = Character.getNumericValue(ch[i]);         //определили,что первое число ябляется арабским
                                                                                 // и переводим это число из char в int
                } else if(   (ch[i]=='*' || ch[i]=='/' || ch[i]=='-' || ch[i]=='+')
@@ -75,9 +76,6 @@ public class CheckNumbers {
             }
 
         }
-
-
-
 
 }
 
